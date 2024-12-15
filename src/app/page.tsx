@@ -1,7 +1,9 @@
 'use client';
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text, IconButton } from "@chakra-ui/react";
+import { FiRefreshCw } from "react-icons/fi";
 import Sidebar from "@/components/layouts/sidebar";
 import Navbar from "@/components/layouts/mobilenav";
+import UserProfileSettings from "@/components/ui/profilecard";
 
 const DashboardLayout: React.FC = () => {
   return (
@@ -27,7 +29,7 @@ const DashboardLayout: React.FC = () => {
         {/* Main content area */}
         <Box
           as="main"
-          color={'black'}
+          color="black"
           ml={{ base: 0, md: "250px" }}
           flex="1"
           p={6}
@@ -35,9 +37,37 @@ const DashboardLayout: React.FC = () => {
           overflowY="auto"
           zIndex={1}
         >
+          <Flex
+            justify="space-between"
+            align="center"
+            mb={6}
+            borderBottom="1px solid #D9D9D9"
+            pb={4}
+          >
+            {/* Breadcrumbs */}
+            <Text fontSize="16px" fontWeight="400" color="gray.600">
+              &lt; &gt; Home &gt; User Profile
+            </Text>
+
+            {/* Refresh button */}
+            <Flex align="center">
+              <IconButton 
+                aria-label="Refresh"
+                variant="ghost"
+                color="gray.600"
+                size="sm"
+              >
+                <FiRefreshCw />
+              </IconButton>
+              <Text fontSize="sm" fontWeight="medium" color="gray.600">
+                Refresh
+              </Text>
+            </Flex>
+          </Flex>
+
+          {/* Main content */}
           <Box>
-            <h1>Dashboard</h1>
-            <p>Welcome to your dashboard!</p>
+            <UserProfileSettings />
           </Box>
         </Box>
       </Flex>

@@ -6,8 +6,6 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-
-import { InputGroup } from "@/components/ui/input-group"
 import {
   MenuContent,
   MenuItem,
@@ -15,6 +13,7 @@ import {
   MenuTrigger,
 } from "@/components/ui/menu";
 import { Avatar } from "@/components/ui/avatar";
+import { InputGroup } from "@/components/ui/input-group"
 import { ChevronDown } from 'lucide-react';
 import { BiSearch } from "react-icons/bi";
 
@@ -38,14 +37,15 @@ const Navbar: React.FC = () => {
         mx="auto"
       >
         <Box flex="1" ml={{ base: 0, md: "250px" }} maxW="calc(100% - 250px)">
-      <InputGroup flex="1" startElement={<BiSearch color="black" size="20px" style={{ marginLeft: "10px" }} />}>
-        <Input
-          placeholder="Quick Search Patient"
-          width="full"
-          bg="gray.50"
-        />
-      </InputGroup>
-    </Box>
+            <InputGroup flex="1" startElement={<BiSearch color="black"/>}>
+                <Input 
+                    bg={'gray.100'}
+                    color={'black'}
+                    width={'full'}
+                    maxWidth={'400px'}
+                    placeholder="Quick search patient" />
+            </InputGroup>
+        </Box>
 
         {/* icons and profile */}
         <Flex alignItems="center" gap={4}>
