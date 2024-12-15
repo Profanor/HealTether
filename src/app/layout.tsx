@@ -1,4 +1,4 @@
-
+import { Provider } from "@/components/ui/provider"
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -21,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <Provider>
+          {children}
+        </Provider>
       </body>
     </html>
   );
