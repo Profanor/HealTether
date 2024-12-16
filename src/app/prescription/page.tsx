@@ -93,11 +93,11 @@ const PrescriptionSettings: React.FC = () => {
 
               <Box>
                 <Box mb={4}>
-                  <label>Doctor's Name</label>
+                  <label>Doctor&apos;s Name</label>
                   <Box as="input" w="full" p={2} border="1px solid #D9D9D9" borderRadius="md" />
                 </Box>
                 <Box mb={4}>
-                  <label>Doctor's Specialty</label>
+                  <label>Doctor&apos;s Specialty</label>
                   <Box as="input" w="full" p={2} border="1px solid #D9D9D9" borderRadius="md" />
                 </Box>
                 <Box mb={4}>
