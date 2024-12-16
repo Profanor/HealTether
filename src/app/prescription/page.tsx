@@ -5,7 +5,7 @@ import Navbar from "@/components/layouts/mobilenav";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import RefreshButton from "@/components/ui/refreshbutton";
 
-const template = "/assets/images/template.svg";
+const template = "/assets/images/file.png";
 
 const PrescriptionSettings: React.FC = () => {
   const handleRefresh = () => {
@@ -61,7 +61,6 @@ const PrescriptionSettings: React.FC = () => {
             <Box
               flex="1"
               bg="gray.100"
-              borderRadius="md"
               display="flex"
               alignItems="center"
               justifyContent="center"
