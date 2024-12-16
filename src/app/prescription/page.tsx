@@ -1,5 +1,5 @@
 'use client';
-import { Box, Flex, Text, IconButton, Image } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Sidebar from "@/components/layouts/sidebar";
 import Navbar from "@/components/layouts/mobilenav";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
@@ -9,7 +9,7 @@ const PrescriptionSettings: React.FC = () => {
     const handleRefresh = () => {
     console.log("Refreshing...");
   };
-  
+
   return (
     <Flex direction="column" h="100vh">
       {/* navbar */}

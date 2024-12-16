@@ -1,5 +1,5 @@
 'use client';
-import { Box, Flex, Text, IconButton, Image } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Sidebar from "@/components/layouts/sidebar";
 import Navbar from "@/components/layouts/mobilenav";
 import UserProfileSettings from "@/components/ui/profilecard";
