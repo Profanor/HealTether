@@ -13,7 +13,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   children,
   variantType = "primary",
   isLoading = false,
-  isDisabled = false,
+  // isDisabled = false,
   icon,
   size = "lg",
   ...props
@@ -91,8 +91,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       borderRadius={6}
       justifyContent="center"
       alignItems="center"
-      isLoading={isLoading}
-      isDisabled={isDisabled || isLoading}
+      // isLoading={isLoading}
+      // isDisabled={isDisabled || isLoading}
       size={size}
       width="full"
       onClick={handleClick}

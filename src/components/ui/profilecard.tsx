@@ -141,7 +141,7 @@ const UserProfileSettings = () => {
                 Add custom{`\n`}template
                 </Text>
                 <Box mt={2} ml={3}>
-                <Image src= {upload} boxSize={3} />
+                <Image src= {upload} boxSize={3} alt="upload icon" />
                 </Box>
             </Flex>
 
