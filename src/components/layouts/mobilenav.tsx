@@ -2,7 +2,6 @@ import React from "react";
 import {
   Box,
   Flex,
-  Input,
   Image,
   Text,
 } from "@chakra-ui/react";
@@ -13,9 +12,8 @@ import {
   MenuTrigger,
 } from "@/components/ui/menu";
 import { Avatar } from "@/components/ui/avatar";
-import { InputGroup } from "@/components/ui/input-group"
 import { ChevronDown } from 'lucide-react';
-import { BiSearch } from "react-icons/bi";
+import SearchBar from "../ui/searchbar";
 
 const user = '/assets/images/user2.svg';
 const bell = '/assets/icons/notification.svg';
@@ -25,28 +23,20 @@ const Navbar: React.FC = () => {
     <Box
       as="nav"
       width="100%"
-      borderBottom="1px solid #F5F4FB"
       bg="white"
       px={4}
       py={2}
+      borderBottom="1px solid #F5F4FB"
     >
       <Flex
         alignItems="center"
-        justifyContent="space-between"
+        justifyContent="center"
         maxW="1200px"
         mx="auto"
       >
-        <Box flex="1" ml={{ base: 0, md: "250px" }} maxW="calc(100% - 250px)">
-            <InputGroup flex="1" startElement={<BiSearch color="black"/>}>
-                <Input 
-                    bg={'gray.100'}
-                    color={'black'}
-                    width={'full'}
-                    maxWidth={'400px'}
-                    placeholder="Quick search patient" />
-            </InputGroup>
-        </Box>
-
+        {/* search bar */}
+        <SearchBar />
+        
         {/* icons and profile */}
         <Flex alignItems="center" gap={4}>
           {/* notification icon */}
