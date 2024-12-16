@@ -69,7 +69,7 @@ const Sidebar = () => {
                     bottom="0"
                     right="0"
                     width="2px"
-                    bg="blue.500"
+                    bg="black"
                     zIndex={1}
                   />
                 )}

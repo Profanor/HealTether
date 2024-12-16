@@ -30,7 +30,7 @@ export const LinkItems: Array<LinkItemProps> = [
   {
     name: "Home",
     icon: "/assets/icons/home.svg",
-    href: "/home",
+    href: "/",
     linkRefs: ['/profile', '/settings']
   },
 
