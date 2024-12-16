@@ -6,7 +6,7 @@ interface BreadcrumbsProps {
 
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ path }) => {
   return (
-    <Text fontSize="16px" fontWeight="400" color="gray.600">
+    <Text cursor={'pointer'} fontSize="16px" fontWeight="400" color="gray.600">
       {path}
     </Text>
   );

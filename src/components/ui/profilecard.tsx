@@ -128,8 +128,6 @@ const UserProfileSettings = () => {
                 align="flex-start"
                 justify="flex-start"
                 direction="column"
-                cursor="pointer"
-                _hover={{ bg: "gray.50" }}
             >
                 <Text 
                 mt={4} 
@@ -141,7 +139,7 @@ const UserProfileSettings = () => {
                 Add custom{`\n`}template
                 </Text>
                 <Box mt={2} ml={3}>
-                <Image src= {upload} boxSize={3} alt="upload icon" />
+                <Image src= {upload} cursor="pointer" boxSize={3} alt="upload icon" />
                 </Box>
             </Flex>
 

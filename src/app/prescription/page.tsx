@@ -66,7 +66,6 @@ const PrescriptionSettings: React.FC = () => {
               alignItems="center"
               justifyContent="center"
               p={4}
-              minH="500px"
             >
               <Image
                 src={template}
@@ -94,9 +93,20 @@ const PrescriptionSettings: React.FC = () => {
 
               <Text color={'#777777'} fontWeight={600} mt={4}>Header Info</Text>
 
-              <Flex justifyContent={'space-between'} alignItems={'flex-start'} flexDirection={'row'} mt={8}>
+              <Flex justifyContent={'space-between'} alignItems={'center'} flexDirection={'row'} mt={8}>
                 <Text>Add Clinic logo</Text>
-                <Image src={camera} alt="camera icon" />
+                <Box 
+                  bg={'#F1E7F9'}
+                  w="100px" 
+                  h="100px" 
+                  borderRadius="50%" 
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  cursor={'pointer'}
+                  >
+                    <Image src={camera} alt="camera icon" cursor={'pointer'} />
+                </Box>
               </Flex>
 
               <Box mt={8}>
