@@ -61,7 +61,7 @@ const Sidebar = () => {
                 bg={isActive ? "gray.100" : "transparent"}
                 _hover={{ bg: "gray.200" }}
               >
-                {/* Active indicator */}
+                {/* active indicator */}
                 {isActive && (
                   <Box
                     position="absolute"

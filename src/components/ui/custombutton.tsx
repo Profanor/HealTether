@@ -29,8 +29,8 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       _active: { bg: "#d3d3d3" },
     },
     secondary: {
-      bg: "gray.200",
-      color: "black",
+      bg: "#F5F5F5",
+      color: "#0C091F",
       _hover: { bg: "gray.300" },
       _active: { bg: "gray.400" },
     },

@@ -1,18 +1,19 @@
 'use client';
-import { Box, Flex, Text, IconButton } from "@chakra-ui/react";
-import { FiRefreshCw } from "react-icons/fi";
+import { Box, Flex, Text, IconButton, Image } from "@chakra-ui/react";
 import Sidebar from "@/components/layouts/sidebar";
 import Navbar from "@/components/layouts/mobilenav";
 import UserProfileSettings from "@/components/ui/profilecard";
 
+const refresh = "/assets/icons/refresh.svg";
+
 const DashboardLayout: React.FC = () => {
   return (
     <Flex direction="column" h="100vh">
-      {/* Navbar */}
+      {/* navbar */}
       <Navbar />
 
       <Flex flex="1" overflow="hidden">
-        {/* Sidebar */}
+        {/* sidebar */}
         <Box
           w={{ base: "full", md: "250px" }}
           h="full"
@@ -26,7 +27,7 @@ const DashboardLayout: React.FC = () => {
           <Sidebar />
         </Box>
 
-        {/* Main content area */}
+        {/* main content area */}
         <Box
           as="main"
           color="black"
@@ -44,12 +45,12 @@ const DashboardLayout: React.FC = () => {
             borderBottom="1px solid #D9D9D9"
             pb={4}
           >
-            {/* Breadcrumbs */}
+            {/* breadcrumbs */}
             <Text fontSize="16px" fontWeight="400" color="gray.600">
               &lt; &gt; Home &gt; User Profile
             </Text>
 
-            {/* Refresh button */}
+            {/* refresh button */}
             <Flex align="center">
               <IconButton 
                 aria-label="Refresh"
@@ -57,15 +58,15 @@ const DashboardLayout: React.FC = () => {
                 color="gray.600"
                 size="sm"
               >
-                <FiRefreshCw />
+                <Image src= {refresh} alt={"refresh icon"} />
               </IconButton>
-              <Text fontSize="sm" fontWeight="medium" color="gray.600">
+              <Text fontSize="sm" fontWeight="600" color="#0F0B28">
                 Refresh
               </Text>
             </Flex>
           </Flex>
 
-          {/* Main content */}
+          {/* main content */}
           <Box>
             <UserProfileSettings />
           </Box>
