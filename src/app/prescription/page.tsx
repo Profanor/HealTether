@@ -1,5 +1,5 @@
 'use client';
-import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text, Separator, Input } from "@chakra-ui/react";
 import Sidebar from "@/components/layouts/sidebar";
 import Navbar from "@/components/layouts/mobilenav";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
@@ -80,28 +80,29 @@ const PrescriptionSettings: React.FC = () => {
             <Box
               flex="1"
               bg="white"
-              border="1px solid #E2E8F0"
-              boxShadow="sm"
-              borderRadius="md"
               p={6}
               minH="500px"
             >
               <Heading size="md" mb={4}>
-                Prescription Contents
+                SETTINGS
               </Heading>
+              <Separator borderColor="2px solid black"/>
+
+              <Text fontWeight={600}>Prescription Contents</Text>
+              <Text color={'#777777'}>Fill in the Clinic details on the prescription</Text>
 
               <Box>
                 <Box mb={4}>
                   <label>Doctor&apos;s Name</label>
-                  <Box as="input" w="full" p={2} border="1px solid #D9D9D9" borderRadius="md" />
+                  <Input bg={'gray.100'} w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
                 <Box mb={4}>
                   <label>Doctor&apos;s Specialty</label>
-                  <Box as="input" w="full" p={2} border="1px solid #D9D9D9" borderRadius="md" />
+                  <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
                 <Box mb={4}>
                   <label>Clinic Address</label>
-                  <Box as="input" w="full" p={2} border="1px solid #D9D9D9" borderRadius="md" />
+                  <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
               </Box>
             </Box>
