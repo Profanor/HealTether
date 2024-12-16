@@ -1,12 +1,14 @@
 'use client';
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import Sidebar from "@/components/layouts/sidebar";
 import Navbar from "@/components/layouts/mobilenav";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import RefreshButton from "@/components/ui/refreshbutton";
 
+const template = "/assets/images/template.svg";
+
 const PrescriptionSettings: React.FC = () => {
-    const handleRefresh = () => {
+  const handleRefresh = () => {
     console.log("Refreshing...");
   };
 
@@ -30,7 +32,7 @@ const PrescriptionSettings: React.FC = () => {
           <Sidebar />
         </Box>
 
-        {/* main content area */}
+        {/* main content */}
         <Box
           as="main"
           color="black"
@@ -41,6 +43,7 @@ const PrescriptionSettings: React.FC = () => {
           overflowY="auto"
           zIndex={1}
         >
+          {/* breadcrumbs and refresh button */}
           <Flex
             justify="space-between"
             align="center"
@@ -48,19 +51,62 @@ const PrescriptionSettings: React.FC = () => {
             borderBottom="1px solid #F5F4FB"
             pb={4}
           >
-            {/* breadcrumbs */}
             <Breadcrumbs path="&lt; &gt; Home &gt; User Profile" />
-
-            {/* refresh button */}
-            <Flex align="center">
-                <RefreshButton onClick={handleRefresh} />
-            </Flex>
+            <RefreshButton onClick={handleRefresh} />
           </Flex>
 
-          {/* main content */}
-          <Box>
+          {/* main layout */}
+          <Flex direction={{ base: "column", md: "row" }} gap={8}>
+            {/* full template */}
+            <Box
+              flex="1"
+              bg="gray.100"
+              borderRadius="md"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              p={4}
+              minH="500px"
+            >
+              <Image
+                src={template}
+                alt="Prescription Template"
+                maxW="100%"
+                maxH="100%"
+                objectFit="contain"
+              />
+            </Box>
 
-          </Box>
+            {/* form */}
+            <Box
+              flex="1"
+              bg="white"
+              border="1px solid #E2E8F0"
+              boxShadow="sm"
+              borderRadius="md"
+              p={6}
+              minH="500px"
+            >
+              <Heading size="md" mb={4}>
+                Prescription Contents
+              </Heading>
+
+              <Box>
+                <Box mb={4}>
+                  <label>Doctor's Name</label>
+                  <Box as="input" w="full" p={2} border="1px solid #D9D9D9" borderRadius="md" />
+                </Box>
+                <Box mb={4}>
+                  <label>Doctor's Specialty</label>
+                  <Box as="input" w="full" p={2} border="1px solid #D9D9D9" borderRadius="md" />
+                </Box>
+                <Box mb={4}>
+                  <label>Clinic Address</label>
+                  <Box as="input" w="full" p={2} border="1px solid #D9D9D9" borderRadius="md" />
+                </Box>
+              </Box>
+            </Box>
+          </Flex>
         </Box>
       </Flex>
     </Flex>
