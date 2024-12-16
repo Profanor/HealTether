@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/ui/breadcrumbs";
 import RefreshButton from "@/components/ui/refreshbutton";
 
 const template = "/assets/images/file.png";
+const camera = "/assets/images/camera.svg";
 
 const PrescriptionSettings: React.FC = () => {
   const handleRefresh = () => {
@@ -91,7 +92,14 @@ const PrescriptionSettings: React.FC = () => {
               <Text fontWeight={600}>Prescription Contents</Text>
               <Text color={'#777777'}>Fill in the Clinic details on the prescription</Text>
 
-              <Box>
+              <Text color={'#777777'} fontWeight={600} mt={4}>Header Info</Text>
+
+              <Flex justifyContent={'space-between'} alignItems={'flex-start'} flexDirection={'row'} mt={8}>
+                <Text>Add Clinic logo</Text>
+                <Image src={camera} alt="camera icon" />
+              </Flex>
+
+              <Box mt={8}>
                 <Box mb={4}>
                   <label>Doctor&apos;s Name</label>
                   <Input bg={'gray.100'} w="full" p={2} border="1px solid #D9D9D9"/>
@@ -101,7 +109,19 @@ const PrescriptionSettings: React.FC = () => {
                   <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
                 <Box mb={4}>
+                  <label>Other information</label>
+                  <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
+                </Box>
+                <Box mb={4}>
                   <label>Clinic Address</label>
+                  <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
+                </Box>
+                <Box mb={4}>
+                  <label>Clinic contact</label>
+                  <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
+                </Box>
+                <Box mb={4}>
+                  <label>Clinic email</label>
                   <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
               </Box>
