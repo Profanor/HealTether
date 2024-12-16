@@ -20,7 +20,7 @@ const UserProfileSettings = () => {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push('/prescription-contents');
+        router.push('/prescription');
     };
   return (
     <Flex

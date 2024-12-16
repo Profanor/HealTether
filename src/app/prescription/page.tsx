@@ -2,16 +2,14 @@
 import { Box, Flex, Text, IconButton, Image } from "@chakra-ui/react";
 import Sidebar from "@/components/layouts/sidebar";
 import Navbar from "@/components/layouts/mobilenav";
-import UserProfileSettings from "@/components/ui/profilecard";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
 import RefreshButton from "@/components/ui/refreshbutton";
 
-const DashboardLayout: React.FC = () => {
-
-  const handleRefresh = () => {
+const PrescriptionSettings: React.FC = () => {
+    const handleRefresh = () => {
     console.log("Refreshing...");
   };
-
+  
   return (
     <Flex direction="column" h="100vh">
       {/* navbar */}
@@ -50,7 +48,7 @@ const DashboardLayout: React.FC = () => {
             borderBottom="1px solid #F5F4FB"
             pb={4}
           >
-           {/* breadcrumbs */}
+            {/* breadcrumbs */}
             <Breadcrumbs path="&lt; &gt; Home &gt; User Profile" />
 
             {/* refresh button */}
@@ -61,7 +59,7 @@ const DashboardLayout: React.FC = () => {
 
           {/* main content */}
           <Box>
-            <UserProfileSettings />
+
           </Box>
         </Box>
       </Flex>
@@ -69,4 +67,4 @@ const DashboardLayout: React.FC = () => {
   );
 };
 
-export default DashboardLayout;
+export default PrescriptionSettings;
