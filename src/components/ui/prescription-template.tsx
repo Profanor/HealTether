@@ -6,12 +6,13 @@ const PrescriptionTemplate: React.FC = () => {
   return (
     <Box
       flex="1"
+      p={4}
       bg="gray.100"
       display="flex"
       flexDirection="column"
       alignItems="flex-start" 
       justifyContent="flex-start"
-      p={4}
+      maxH="800px"
     >
       <Text fontSize={'15px'} color={'#A1A1A1'}>Preview of the prescription</Text>
       <Image

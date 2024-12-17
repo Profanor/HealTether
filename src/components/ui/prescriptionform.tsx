@@ -13,14 +13,14 @@ const PrescriptionForm: React.FC = () => {
         p={6}
         minH="500px"
         >
-        <Heading size="md" mb={4}>
+        <Heading size="md">
             SETTINGS
         </Heading>
-        <Separator borderColor="2px solid black"/>
-
-        <Text fontWeight={600}>Prescription Contents</Text>
-        <Text color={'#777777'}>Fill in the Clinic details on the prescription</Text>
-
+        <Flex flexDirection={'column'}>
+            <Separator borderColor="2px solid black"/>
+            <Text fontWeight={600} mt={2}>Prescription Contents</Text>
+            <Text color={'#777777'}>Fill in the Clinic details on the prescription</Text>
+        </Flex>
         <Text color={'#777777'} fontWeight={600} mt={4}>Header Info</Text>
 
         <Flex justifyContent={'space-between'} alignItems={'center'} flexDirection={'row'} mt={4}>
