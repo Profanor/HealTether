@@ -5,10 +5,7 @@ import { BiSearch } from "react-icons/bi";
 
 const SearchBar: React.FC = () => {
   return (
-    <Box
-      flex="1"
-      ml={{ base: 0, md: "150px" }}
-    >
+    <Box>
       <InputGroup
         startElement={
           <Box padding="0.5rem" display="flex" alignItems="center">

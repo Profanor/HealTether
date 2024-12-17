@@ -30,12 +30,17 @@ const Navbar: React.FC = () => {
     >
       <Flex
         alignItems="center"
-        justifyContent="center"
-        maxW="1200px"
-        mx="auto"
+        justifyContent="space-between"
+        px={4}
+        py={2}
+        width="100%"
       >
         {/* search bar */}
-        <SearchBar />
+        <Flex flex="1" justify="center">
+          <Box width="100%" maxW="500px">
+            <SearchBar />
+          </Box>
+        </Flex>
         
         {/* icons and profile */}
         <Flex alignItems="center" gap={4}>
