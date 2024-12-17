@@ -1,5 +1,13 @@
 'use client';
-import { Box, Flex, Heading, Image, Text, Separator, Input } from "@chakra-ui/react";
+import { 
+  Box, 
+  Flex, 
+  Heading, 
+  Image, 
+  Text, 
+  Separator, 
+  Input 
+} from "@chakra-ui/react";
 import Sidebar from "@/components/layouts/sidebar";
 import Navbar from "@/components/layouts/mobilenav";
 import Breadcrumbs from "@/components/ui/breadcrumbs";
@@ -111,29 +119,42 @@ const PrescriptionSettings: React.FC = () => {
 
               <Box mt={8}>
                 <Box mb={4}>
-                  <label>Doctor&apos;s Name</label>
-                  <Input bg={'gray.100'} w="full" p={2} border="1px solid #D9D9D9"/>
+                  <Text as="label" color="#868686" fontWeight={600}>Doctor&apos;s Name</Text>
+                  <Input bg={'#FAFAFA'} w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
                 <Box mb={4}>
-                  <label>Doctor&apos;s Specialty</label>
-                  <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
+                  <Text as="label" color="#868686" fontWeight={600}>Doctor&apos;s Specialty</Text>
+                  <Input bg={'#FAFAFA'}  w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
                 <Box mb={4}>
-                  <label>Other information</label>
-                  <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
+                  <Text as="label" color="#868686" fontWeight={600}>Other information</Text>
+                  <Input bg={'#FAFAFA'}  w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
                 <Box mb={4}>
-                  <label>Clinic Address</label>
-                  <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
+                  <Text color={'#777777'} fontWeight={700}>Footer info</Text>
+                  <Text as="label" color="#868686" fontWeight={600}>Clinic Address</Text>
+                  <Input bg={'#FAFAFA'}  w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
                 <Box mb={4}>
-                  <label>Clinic contact</label>
-                  <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
+                  <Text as="label" color="#868686" fontWeight={600}>Clinic contact</Text>
+                  <Input bg={'#FAFAFA'}  w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
+                <Text 
+                  color={'#5351C7'} 
+                  cursor={'pointer'} 
+                  onClick={() => console.log('Add another contact clicked')}>
+                    + Add another contact
+                </Text>
                 <Box mb={4}>
-                  <label>Clinic email</label>
-                  <Input bg={'gray.100'}  w="full" p={2} border="1px solid #D9D9D9"/>
+                  <Text as="label" color="#868686" fontWeight={600}>Clinic email</Text>
+                  <Input bg={'#FAFAFA'}  w="full" p={2} border="1px solid #D9D9D9"/>
                 </Box>
+                <Text 
+                  color={'#5351C7'} 
+                  cursor={'pointer'} 
+                  onClick={() => console.log('Add another email clicked')}>
+                    + Add another email
+                </Text>
               </Box>
             </Box>
           </Flex>
