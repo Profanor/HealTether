@@ -1,4 +1,4 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 
 const template = "/assets/images/file.png";
 
@@ -8,17 +8,18 @@ const PrescriptionTemplate: React.FC = () => {
       flex="1"
       bg="gray.100"
       display="flex"
+      flexDirection="column"
       alignItems="flex-start" 
-      justifyContent="center"
+      justifyContent="flex-start"
       p={4}
     >
-      {/* <Text>Preview of the prescription</Text> */}
+      <Text fontSize={'15px'} color={'#A1A1A1'}>Preview of the prescription</Text>
       <Image
         src={template}
         alt="Prescription Template"
         maxW="100%"
         maxH="100%"
-        mt={6}
+        mt={2}
         objectFit="contain"
       />
     </Box>

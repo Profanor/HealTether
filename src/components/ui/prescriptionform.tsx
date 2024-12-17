@@ -1,27 +1,30 @@
 import { Box, Text, Input, Flex, Image, Heading, Separator } from "@chakra-ui/react";
+import CustomButton from "./custombutton";
+import ClinicTimings from "./clinic-timings";
+import AutoFillSection from "./autofillcard";
 
 const camera = "/assets/images/camera.svg";
 
 const PrescriptionForm: React.FC = () => {
   return (
     <Box
-              flex="1"
-              bg="white"
-              p={6}
-              minH="500px"
-            >
-              <Heading size="md" mb={4}>
-                SETTINGS
-              </Heading>
-              <Separator borderColor="2px solid black"/>
+        flex="1"
+        bg="white"
+        p={6}
+        minH="500px"
+        >
+        <Heading size="md" mb={4}>
+            SETTINGS
+        </Heading>
+        <Separator borderColor="2px solid black"/>
 
-              <Text fontWeight={600}>Prescription Contents</Text>
-              <Text color={'#777777'}>Fill in the Clinic details on the prescription</Text>
+        <Text fontWeight={600}>Prescription Contents</Text>
+        <Text color={'#777777'}>Fill in the Clinic details on the prescription</Text>
 
-              <Text color={'#777777'} fontWeight={600} mt={4}>Header Info</Text>
+        <Text color={'#777777'} fontWeight={600} mt={4}>Header Info</Text>
 
-              <Flex justifyContent={'space-between'} alignItems={'center'} flexDirection={'row'} mt={8}>
-                <Text>Add Clinic logo</Text>
+        <Flex justifyContent={'space-between'} alignItems={'center'} flexDirection={'row'} mt={4}>
+            <Text>Add Clinic logo</Text>
                 <Box 
                   bg={'#F1E7F9'}
                   w="100px" 
@@ -32,11 +35,11 @@ const PrescriptionForm: React.FC = () => {
                   justifyContent="center"
                   cursor={'pointer'}
                   >
-                    <Image src={camera} alt="camera icon" cursor={'pointer'} />
+                <Image src={camera} alt="camera icon" cursor={'pointer'} />
                 </Box>
-              </Flex>
+        </Flex>
 
-              <Box mt={8}>
+              <Box mt={4}>
                 <Box mb={4}>
                   <Text as="label" color="#868686" fontWeight={600}>Doctor&apos;s Name</Text>
                   <Input bg={'#FAFAFA'} w="full" p={2} border="1px solid #D9D9D9"/>
@@ -74,6 +77,13 @@ const PrescriptionForm: React.FC = () => {
                   onClick={() => console.log('Add another email clicked')}>
                     + Add another email
                 </Text>
+                <ClinicTimings />
+                <AutoFillSection />
+                <Flex justifyContent={'center'} alignItems={'center'} mt={8}>
+                <CustomButton variantType="primary" maxWidth={'100px'}>
+                    Save
+                </CustomButton>
+                </Flex>
               </Box>
             </Box>
   );

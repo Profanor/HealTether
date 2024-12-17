@@ -50,18 +50,18 @@ const Navbar: React.FC = () => {
             cursor={'pointer'}
             alt="bell icon"
             h="auto"
-            boxSize="25px"
+            boxSize="23px"
             objectFit="contain"
           />
 
           {/* profile section */}
           <Flex alignItems="center" gap={2}>
             <Avatar
-              size="sm"
+              size="xs"
               name="Kim Jones"
               src={user}
             />
-            <Text fontWeight="medium" color={'black'}>Kim Jones</Text>
+            <Text fontWeight="medium" fontSize={'14px'} color={'black'}>Kim Jones</Text>
           </Flex>
 
           {/* language selector */}
